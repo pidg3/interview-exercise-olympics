@@ -8,11 +8,11 @@ const getCsvData = parser => {
   let results = [];
   return new Promise((resolve, reject) => {
     fs.createReadStream(PATH)
-    .pipe(csv())
-    .on('data', data => results.push(data))
-    .on('end', () => {
-      resolve(results.filter(parser));
-    });
+      .pipe(csv())
+      .on('data', data => results.push(data))
+      .on('end', () => {
+        resolve(results.filter(parser));
+      });
   });
 };
 
