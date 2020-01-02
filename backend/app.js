@@ -1,4 +1,5 @@
 const Koa = require('koa');
+const cors = require('@koa/cors');
 const app = new Koa();
 
 var Router = require('koa-router');
@@ -10,11 +11,16 @@ const setData = (results) => app.context.data = results;
 parseData(setData);
 
 router.get('/medals', async (ctx, next) => {
-  ctx.body = ctx.data;
+  const limit = Number(ctx.request.query.limit || 10);
+  const offset = Number(ctx.request.query.offset || 0);  
+  const startPoint = limit * offset;
+  const endPoint = startPoint + limit;
+  ctx.body = ctx.data.slice(startPoint, endPoint);
 });
 
 app
+  .use(cors())
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.listen(3000);
+app.listen(4000);
