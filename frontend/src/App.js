@@ -8,6 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from './pages/Home'; 
+import Medals from './pages/Medals'; 
 
 function App() {
   return (
@@ -34,10 +36,10 @@ function App() {
       <Container className="main" style={{ margin: '7em'}}>
         <Switch>
           <Route exact path="/">
-            <p>Home</p>
+            <Home />
           </Route>
           <Route path="/medals">
-            <p>Medals</p>
+            <Medals />
           </Route>
         </Switch>
       </Container>
