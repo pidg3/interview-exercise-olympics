@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './olympics_logo_white.png';
 import 'semantic-ui-css/semantic.min.css';
 import { Menu, Container, Header } from 'semantic-ui-react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
