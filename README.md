@@ -37,3 +37,35 @@ Prep required:
   - Returns an array of medal winners
   - No auth requirements yet
   - Pagination is support via `limit` and `offset` query parameters
+
+## FOR DIEGO/RUSSELL
+
+### PR
+
+For the Pull Request. I'd probably expect people to pick up on most of the following: 
+
+- Good to refactor to use async/await, but there is a major design change here in that we parse the csv each time a request is made, as opposed to loading into memory when app first loaded. Have we considered performance implications of this? 
+- Tests: good coverage however this is based on the same data source used for the actual app. Might want to consider mocking out sample data instead. 
+- The way we do the filtering in app.js. We might want to break this out into a separate business logic file. Also we can do this as a `filter` rather than `forEach`. 
+- The filtering requires an exact rather than partial match, and is case sensitive. Have we checked this with the PO? 
+- Commit messages: helpful to add more description as opposed to 'wip'. 
+- We don't handle `reject` on the promise in parser.js. Need to add try/catch. 
+
+I'm sure there will be other (unintentional) stuff too 😉 It will also be interesting to see the tone of their feedback, and whether they mention they would normally speak to the dev in person. 
+
+### Exercises
+
+Possible exercises we could get people to do. We'd probably tweak these on the hoof depending on the candidate's experience. Full stack will be some combination of the two. 
+
+FE only:
+  - Add pagination to the table
+  - Add filtering by Name/Event/Year to the table (after merging in PR)
+  - Add error handling to API call
+  - Relace the 'Gold/Silver/Gold' copy with icons
+
+BE only:
+  - Add the actual country to the response. The data required for this is in the 'fixtures' folder.
+  - Add a new endpoint to expose country/NOC data
+  - Add a basic caching layer
+  - Add proper error handling and logging
+  - Implement any suggested changes from PR review
