@@ -25,11 +25,15 @@ Prep required:
 ### Frontend
 
 - Built with create-react-app
-- To run: `npm start`
+- To run: `npm start`. Runs on `localhost:3000`
 - To test: `npm run test`
 
 ### Backend
 
 - Koa/Koa-router used
-- To run: `npm run dev`
+- To run: `npm run dev`. Runs on `localhost:4000`
 - To test: `npm run test` (nb - no proper tests at the moment, framework stubbed out)
+- Single endpoint defined: `/medals`
+  - Returns an array of medal winners
+  - No auth requirements yet
+  - Pagination is support via `limit` and `offset` query parameters

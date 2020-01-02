@@ -11,7 +11,6 @@ export default function Medals() {
     };
     fetchData();
   }, []);
-  console.log('data', data);
 
   return (
     <Container text>
