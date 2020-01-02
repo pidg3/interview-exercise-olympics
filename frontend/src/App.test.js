@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
-import { Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react';
 
 it('renders nav menu', () => {
   const wrapper = shallow(<App />);

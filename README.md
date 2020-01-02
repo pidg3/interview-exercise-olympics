@@ -20,6 +20,7 @@ Prep required:
 - Skeleton application for a service designed to search Olympics medal data since 1945. Currently just gives first 10 entries
 - Front and back end are tightly coupled (although can be tested independently)
 - Node 12.14.0 used
+- Prettier script defined at top level, to run: `npm run prettify`
 
 ### Frontend
 

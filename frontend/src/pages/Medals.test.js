@@ -10,20 +10,20 @@ jest.mock('axios');
 const mockData = {
   data: [
     {
-      "ID": "16",
-      "Name": "Juhamatti Tapio Aaltonen",
-      "Sex": "M",
-      "Age": "28",
-      "Height": "184",
-      "Weight": "85",
-      "NOC": "FIN",
-      "Games": "2014 Winter",
-      "Year": "2014",
-      "Season": "Winter",
-      "City": "Sochi",
-      "Sport": "Ice Hockey",
-      "Event": "Ice Hockey Men's Ice Hockey",
-      "Medal": "Bronze"
+      ID: '16',
+      Name: 'Juhamatti Tapio Aaltonen',
+      Sex: 'M',
+      Age: '28',
+      Height: '184',
+      Weight: '85',
+      NOC: 'FIN',
+      Games: '2014 Winter',
+      Year: '2014',
+      Season: 'Winter',
+      City: 'Sochi',
+      Sport: 'Ice Hockey',
+      Event: "Ice Hockey Men's Ice Hockey",
+      Medal: 'Bronze'
     }
   ]
 };
@@ -46,5 +46,12 @@ it('renders table with data from API', async () => {
   expect(wrapper.find(Table.Header).length).toBe(1);
   expect(wrapper.find(Table.Body).length).toBe(1);
   expect(wrapper.find(Table.Body).find(Table.Row).length).toBe(1);
-  expect(wrapper.find(Table.Body).find(Table.Row).find('#name').at(0).text()).toBe('Juhamatti Tapio Aaltonen');  
+  expect(
+    wrapper
+      .find(Table.Body)
+      .find(Table.Row)
+      .find('#name')
+      .at(0)
+      .text()
+  ).toBe('Juhamatti Tapio Aaltonen');
 });
