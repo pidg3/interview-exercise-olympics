@@ -18,19 +18,21 @@ Prep required:
 ## About the App
 
 - Skeleton application for a service designed to search Olympics medal data since 1945. Currently just gives first 10 entries
-- Front and back end are tightly coupled (although can be tested independently)
+- Front and back end are tightly coupled (although can be tested independently). Located in subdirectories: `/frontend` and `/backend`.
 - Node 12.14.0 used
 - Prettier script defined at top level, to run: `npm run prettify`
 
 ### Frontend
 
 - Built with create-react-app
+- To set up: `cd frontend`, `npm i`
 - To run: `npm start`. Runs on `localhost:3000`
 - To test: `npm run test`
 
 ### Backend
 
 - Koa/Koa-router used
+- To set up: `cd backend`, `npm i`
 - To run: `npm run dev`. Runs on `localhost:4000`
 - To test: `npm run test` (nb - no proper tests at the moment, framework stubbed out)
 - Single endpoint defined: `/medals`
