@@ -42,7 +42,7 @@ Prep required:
 
 ## FOR DIEGO/RUSSELL
 
-### PR
+### PR
 
 For the Pull Request. I'd probably expect people to pick up on most of the following: 
 
@@ -55,7 +55,7 @@ For the Pull Request. I'd probably expect people to pick up on most of the follo
 
 I'm sure there will be other (unintentional) stuff too 😉 It will also be interesting to see the tone of their feedback, and whether they mention they would normally speak to the dev in person. 
 
-### Exercises
+### Exercises
 
 Possible exercises we could get people to do. We'd probably tweak these on the hoof depending on the candidate's experience. Full stack will be some combination of the two. 
 
