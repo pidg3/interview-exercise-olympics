@@ -21,6 +21,7 @@ Prep required:
 - Front and back end are tightly coupled (although can be tested independently). Located in subdirectories: `/frontend` and `/backend`.
 - Node 12.14.0 used
 - Prettier script defined at top level, to run: `npm run prettify`
+- Package lock files are not committed as we've found these can cause issues with moving in and out of the work boundary. The app is simple enough not to need them
 
 ### Frontend
 
